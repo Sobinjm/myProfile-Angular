@@ -1,0 +1,9 @@
+<form [formGroup]="sampleForm" (ngSubmit)="onSubmit123()">
+    <input type="text" formControlName="userName">
+    <input type="text" formControlName="userEmail">
+    <p *ngIf="sampleFormControls.userName.errors?.['minlength']">Username Must be min 5 letters</p>
+    <!-- <p *ngIf="sampleFormControls.userEmail.errors?.['required']">Email is required</p>
+    <p *ngIf="sampleFormControls.userEmail.errors?.['email']">Email Invalid</p> -->
+    <p *ngIf="sampleForm.invalid">Form Invalid</p>
+    <input type="submit" value="Validate" >
+</form>
